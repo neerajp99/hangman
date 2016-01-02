@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link href='https://fonts.googleapis.com/css?family=Chelsea+Market' rel='stylesheet' type='text/css'>
+    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
+
+    <body>
+        <div class="box">
+            <div class="letterbox">
+                <ul>
+                    <div class="class1">
+                        <li>Q</li>
+                        <li>W</li>
+                        <li id="E">E</li>
+                        <li>R</li>
+                        <li>T</li>
+                        <li>Y</li>
+                        <li id="U">U</li>
+                        <li id="I">I</li>
+                        <li id="O">O</li>
+                        <li>P</li>
+                    </div>
+                    <div class="class2">
+                        <li id="A">A</li>
+                        <li>S</li>
+                        <li>D</li>
+                        <li>F</li>
+                        <li>G</li>
+                        <li>H</li>
+                        <li>J</li>
+                        <li>K</li>
+                        <li>L</li>
+                    </div>
+                    <div class="class3">
+                        <li>Z</li>
+                        <li>X</li>
+                        <li>C</li>
+                        <li>V</li>
+                        <li>B</li>
+                        <li>N</li>
+                        <li>M</li>
+                        <a class="linki" href="index.html"> <i class="fa fa-repeat active fa-3x "></i></a>
+                    </div>
+                    <div class="space" onclick="#">
+                        <p class="spaceb"></p>
+                    </div>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <button>
+                    <h4>RULES</h4></button>
+                <ul class="dropdown-menu">
+                    <a href="#"> > Choose the categoey</a>
+                    <a href="#"> > Answer will be related to that category</a></li>
+                    <a href="#"> > Enter the aplhabets which fits</a>
+                    <a href="#"> > After 5 wrong gueses, the game will over</a>
+                    <a href="#"> > By answering all correct you will win</a>
+                </ul>
+            </div>
+            <select id="select" onchange="changeCategory()">
+                <option value="0">MOVIES</option>
+                <option value="1">CITIES</option>
+                <option value="2">ANIMALS</option>
+                <option value="3">SPORTS</option>
+            </select>
+            <canvas id="hangmana" width="200px"></canvas>
+            <div id="keyword">
+                <hr>
+            </div>
+        </div>
+        <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'></script>
+        <script type='text/javascript' src='main.js'></script>
+    </body>
+
+    </html>
