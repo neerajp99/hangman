@@ -110,8 +110,6 @@ $('li').click(function() { // check
             index1 = 0;
         }
 
-        else{
-        	 document.getElementById("keyword").innerHTML = "Ooops!!You lost.";
-        }
+        
     }
 });
