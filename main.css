@@ -220,3 +220,6 @@ option:hover {
 a {
     font-size:18px;
 }
+.disable{
+    opacity:0.2;
+}

@@ -24,7 +24,6 @@ function arms() {
 function legs() {
     draw(120, 110, 105, 130);
     draw(120, 110, 135, 130);};
-
 initialDrawing();
 var drawThings = [rope, head, body, arms, legs];
 
@@ -38,6 +37,9 @@ var index = 0,
     word, TheWinner, N, first, second, index1 = 0;
 var voc = "AEIOU";
 
+
+
+
 function changeCategory() {
 
     var select = document.getElementById("select");
@@ -48,14 +50,16 @@ function changeCategory() {
 };
 
 function rope() {
-    draw(120, 25, 120, 50);};
-
+    draw(120, 25, 120, 50);
+};
 function reset() {
     $("li").removeClass("disable");
     document.getElementById("keyword").innerHTML = "";
     context.clearRect(0, 0, 300, 200);
     initialDrawing();
-    play();};
+    play();
+};
+
 function vowels() {
     N = "";
     for (i in word) {
@@ -63,24 +67,21 @@ function vowels() {
             N += word.charAt(i) + " ";
             TheWinner--;
             var vowel = document.getElementById(word.charAt(i));
+            $(vowel).addClass("disable");
         } else
-            N += "_ ";
-                }
-    document.getElementById("keyword").innerHTML = N;
+            N += "_ ";}document.getElementById("keyword").innerHTML = N;
 }
 function play() {
     word = categories[index][Math.floor(Math.random() * 5)];
     TheWinner = word.length;
-    vowels();
-};
+    vowels();};
 play();
 index = 0;
 $('li').click(function() { // check
     if (this.className != "disable") {
         var letter = this.innerHTML;
         if (word.indexOf(letter) != -1) {
-            for (i in word)
-                if (letter == word.charAt(i)) {
+            for (i in word) if (letter == word.charAt(i)) {
                     if (i == 0) {
                         first = letter;
                         var res = N.substring(1, N.length);
@@ -88,8 +89,7 @@ $('li').click(function() { // check
                     } else {
                         first = N.substring(0, 2 * i);
                         second = N.substring(2 * i + 1, N.length);
-                        first += letter + second;
-                    }
+                        first += letter + second;                    }
                     N = first;
                     TheWinner--;
                     document.getElementById("keyword").innerHTML = N;
@@ -109,7 +109,5 @@ $('li').click(function() { // check
             $("li").addClass("disable");
             index1 = 0;
         }
-
-        
     }
 });
